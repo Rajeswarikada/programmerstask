@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+        *{
+            background-color:skyblue;
+        }
+        #l1{
+           color:blueviolet;
+           font-size:60px;
+        }
+        span{
+            color:blue;
+            font-size: 30px;
+        }
+        #d,#f{
+            font-size: 30px;
+        }
+        button{
+            border-radius:100px;
+            color:darkgreen;
+            border:none;
+            font-Size:20px;
+            font-weight: bold;
+        }
+        .image{
+            height:120px;
+             width:120px;
+             border-radius:100px;
+            }
+        #a{
+           color:black;
+        }
+    </style>
+</head>
+<body>
+
+    
+        <center><marquee><h1 id="l1">Rock Paper Scissor Game</h1></marquee></center>
+        <center><span style="margin-right:40px">You:</span><button id="d" style="margin-right:130px"></button>
+        <span>PC:</span><button id="f" ></button></center>
+        <br><br><br><br>
+<center>
+    <button onclick="h('rock')"><img src="1.jpeg" class="image" style="margin-right:10px;"><center><span id="a">Rock</span></center></button>
+    <button onclick="h('paper')"><img src="paper.jpg" class="image" style="margin-right:40px;margin-left:50px;"><center><span id="a">Paper</span></center></button>
+    <button onclick="h('scissor')"><img src="scissor.jpg" class="image" style="margin-right:20px;margin-left:30px"><center><span id="a">Scissor</span></center></button><br>
+    <br><span style="font-size:30px;color:deeppink;margin-right:30px">Computer Choice:</span><button id="e" style="color:darkgreen;font-Size:30px"></button>
+    <span style="font-size:30px;color:deeppink;margin-left:80px">Your Choice:</span><button id="g" style="color:darkgreen;font-Size:30px"></button>
+    <p id="i"></p></center>
+<script type="text/javascript">
+    var p=1
+    var p1=1
+    function h(raji){
+       const c=["rock","paper","scissor"]
+       let r=Math.floor(Math.random()*c.length);
+       let h=document.getElementById("e")
+       h.innerText=c[r]
+       let h6=document.getElementById("g")
+       h6.innerText=raji
+       let h4=document.getElementById("d")           
+       let h5=document.getElementById("f")
+       let h7=document.getElementById("i")
+       if (c[r]=="rock"&&raji=="paper"){
+            h4.innerText=p++  
+       }
+       if (c[r]=="paper"&&raji=="rock"){
+            h5.innerText=p1++  
+       }
+       if (c[r]=="scissor"&&raji=="rock"){
+            h4.innerText=p++  
+       }
+       if (c[r]=="rock"&&raji=="scissor"){
+            h5.innerText=p1++  
+       }
+       if (c[r]=="scissor"&&raji=="paper"){
+            h5.innerText=p1++  
+       }
+       if (c[r]=="paper"&&raji=="scissor"){
+            h4.innerText=p++  
+       }
+       if (c[r]=="paper"&&raji=="rock"){
+            h5.innerText=p1++  
+       }
+       if (c[r]=="rock"&&raji=="paper"){
+            h4.innerText=p++  
+       }
+       if (c[r]==raji){
+        alert("Draw")
+       }
+        
+    }
+</script>
+</body>
+</html>
